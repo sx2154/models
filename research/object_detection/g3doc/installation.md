@@ -93,6 +93,20 @@ Note: This command needs to run from every new terminal you start. If you wish
 to avoid running this manually, you can add it as a new line to the end of your
 ~/.bashrc file.
 
+## Install Libraries
+
+When running under Windows environment, the object_detection and slim libraries
+won't be added through adding them into Path. This can be doen by running following
+in command line from tensorflow/models/research/:
+
+``` bash
+# From tensorflow/models/research/
+python setup.py build
+python setup.pu install
+# From tensorflow/models/research/slim
+pip install -e .
+```
+
 # Testing the Installation
 
 You can test that you have correctly installed the Tensorflow Object Detection\
